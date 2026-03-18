@@ -91,13 +91,7 @@ section {
   }
 
   .hero-photo {
-    display: block;
-    order: -1;
-  }
-
-  .hero-photo img {
-    width: 60px;
-    height: 60px;
+    display: none;
   }
 
   h1 {
@@ -349,4 +343,11 @@ footer a {
 
 footer a:hover {
   color: var(--fg);
+}
+
+.moira-quote {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 0.5rem;
 }
