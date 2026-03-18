@@ -76,7 +76,7 @@ section {
   border-bottom: 1px solid var(--border);
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   section {
     padding: 2.75rem 0;
   }
@@ -96,8 +96,8 @@ section {
   }
 
   .hero-photo img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 
   h1 {
