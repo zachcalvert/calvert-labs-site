@@ -21,12 +21,17 @@
   <main>
 
     <section id="hero">
-      <div class="container">
-        <h1>Custom software for small businesses.</h1>
-        <p class="tagline">
-          I build web platforms, integrations, and infrastructure — so you can stop duct-taping SaaS tools together and own something that actually fits.
-        </p>
-        <a class="cta" href="#contact">Get in touch</a>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Custom software for small businesses.</h1>
+          <p class="tagline">
+            I build web platforms, integrations, and infrastructure — so you can stop duct-taping SaaS tools together and own something that actually fits.
+          </p>
+          <a class="cta" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-photo">
+          <img src="images/me.png" alt="Zach Calvert" />
+        </div>
       </div>
     </section>
 
@@ -61,13 +66,14 @@
     <section id="work">
       <div class="container">
         <h2>Work</h2>
+
         <div class="project">
           <div class="project-header">
             <span class="project-name">Xcelerate Women</span>
             <a href="https://xceleratewomen.app" target="_blank" rel="noopener">xceleratewomen.app ↗</a>
           </div>
           <p>
-            Replaced a Webflow + Memberstack setup with a fully custom member platform — handling onboarding, profiles, a business directory, subscription billing, a blog, and automated syncing with HubSpot and QuickBooks. Deployed on Fly.io for around $17/month.
+            Replaced a Webflow + Memberstack setup with a fully custom member platform — handling onboarding, profiles, a business directory, subscription billing, a newsletter archive, and automated syncing with HubSpot and QuickBooks. Deployed on Fly.io for around $17/month.
           </p>
           <ul class="project-tags">
             <li>Django</li>
@@ -75,8 +81,17 @@
             <li>Stripe</li>
             <li>HubSpot</li>
             <li>QuickBooks</li>
+            <li>HTMX</li>
             <li>Fly.io</li>
           </ul>
+          <div class="screenshots">
+            <img class="screenshot" src="images/xcelerate-dashboard.png" alt="Xcelerate Women member dashboard" />
+            <img class="screenshot" src="images/xcelerate-insights.png" alt="Business insights dashboard — membership, MRR, conversion" />
+            <div class="screenshot-row">
+              <img class="screenshot" src="images/xcelerate-debug.png" alt="Celery debug dashboard with live HTMX updates" />
+              <img class="screenshot" src="images/xcelerate-blog-admin.png" alt="Newsletter archive admin built with React Admin" />
+            </div>
+          </div>
         </div>
 
         <div class="project">
@@ -85,15 +100,22 @@
             <a href="https://eplbets.net" target="_blank" rel="noopener">eplbets.net ↗</a>
           </div>
           <p>
-            A real-time English Premier League prediction game with live standings, pick history, and a leaderboard. Built as a personal project and demo of real-time web app capabilities.
+            A real-time English Premier League prediction game with live match odds, parlay slips, a leaderboard, and live standings. Built as a personal project and demo of real-time web app capabilities.
           </p>
           <ul class="project-tags">
             <li>Django</li>
-            <li>WebSockets</li>
             <li>React</li>
+            <li>WebSockets</li>
             <li>Fly.io</li>
           </ul>
+          <div class="screenshots">
+            <img class="screenshot" src="images/eplbets-parlay-slip.png" alt="EPL Bets odds board with parlay slip" />
+            <div class="screenshot-row">
+              <img class="screenshot" src="images/eplbets-dashboard.png" alt="EPL Bets matchday dashboard" />
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -109,6 +131,10 @@
         <p class="github">
           <a href="https://github.com/zachcalvert" target="_blank" rel="noopener">github.com/zachcalvert ↗</a>
         </p>
+        <div class="moira">
+          <img src="images/moira-rose.png" alt="Moira Rose" />
+          <span>Moira Rose, Chief Morale Officer</span>
+        </div>
       </div>
     </section>
 

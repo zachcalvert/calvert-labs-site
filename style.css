@@ -98,10 +98,17 @@ h2 {
 
 /* Hero */
 
-#hero .tagline {
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text .tagline {
   font-size: 1.125rem;
   color: var(--muted);
-  max-width: 560px;
+  max-width: 480px;
   margin-bottom: 2rem;
 }
 
@@ -119,6 +126,25 @@ h2 {
 
 .cta:hover {
   opacity: 0.88;
+}
+
+.hero-photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo {
+    display: none;
+  }
 }
 
 /* Services */
@@ -143,7 +169,7 @@ h2 {
 /* Work */
 
 .project {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .project:last-child {
@@ -182,6 +208,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-tags li {
@@ -190,6 +217,38 @@ h2 {
   color: var(--fg);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
+}
+
+/* Screenshots */
+
+.screenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: block;
+}
+
+.screenshot-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.screenshot-row .screenshot {
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  .screenshot-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Contact */
@@ -210,10 +269,31 @@ h2 {
 
 .github {
   margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .github a {
   font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.moira {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.moira img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+.moira span {
+  font-size: 0.875rem;
   color: var(--muted);
 }
 
