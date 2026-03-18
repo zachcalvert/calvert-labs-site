@@ -2,7 +2,7 @@
 # Deploy with: fly deploy
 
 app = "calvert-labs-site"
-primary_region = "sea"
+primary_region = "sjc"
 
 [build]
 
