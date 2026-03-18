@@ -86,9 +86,8 @@ section {
   }
 
   .hero-grid {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 1.25rem;
-    align-items: center;
   }
 
   .hero-photo {
