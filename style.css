@@ -157,6 +157,60 @@ h2 {
   display: block;
 }
 
+/* Build vs. buy callout */
+
+.cost-callout {
+  margin-top: 2.5rem;
+  padding: 1.1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: #f0f5ff;
+  border-radius: 0 6px 6px 0;
+}
+
+.cost-callout p {
+  font-size: 0.975rem;
+  color: var(--fg);
+  line-height: 1.65;
+}
+
+/* Process */
+
+.process-list {
+  list-style: none;
+  counter-reset: process;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.process-list li {
+  counter-increment: process;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 0.75rem;
+  align-items: start;
+}
+
+.process-list li::before {
+  content: counter(process);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: #e8effe;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.process-list strong {
+  display: block;
+}
+
 /* Work */
 
 .project {
