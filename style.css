@@ -76,46 +76,6 @@ section {
   border-bottom: 1px solid var(--border);
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 2.75rem 0;
-  }
-
-  h2 {
-    margin-bottom: 1.25rem;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .hero-photo {
-    display: none;
-  }
-
-  h1 {
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-text .tagline {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .project {
-    margin-bottom: 2.5rem;
-  }
-
-  .screenshot-row {
-    grid-template-columns: 1fr;
-  }
-
-  .github {
-    margin-bottom: 1.5rem;
-  }
-}
-
 section:last-of-type {
   border-bottom: none;
 }
@@ -350,4 +310,50 @@ footer a:hover {
   font-style: italic;
   color: var(--muted);
   margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2.75rem 0;
+  }
+
+  h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .hero-photo {
+    display: block;
+    order: -1;
+  }
+
+  .hero-photo img {
+    width: 72px;
+    height: 72px;
+  }
+
+  h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-text .tagline {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project {
+    margin-bottom: 2.5rem;
+  }
+
+  .screenshot-row {
+    grid-template-columns: 1fr;
+  }
+
+  .github {
+    margin-bottom: 1.5rem;
+  }
 }
