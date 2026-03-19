@@ -174,5 +174,17 @@
     </div>
   </footer>
 
+  <script>
+    document.querySelectorAll('.screenshot').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox';
+        overlay.innerHTML = `<img src="${img.src}" alt="${img.alt}" />`;
+        overlay.addEventListener('click', () => overlay.remove());
+        document.body.appendChild(overlay);
+      });
+    });
+  </script>
 </body>
 </html>
