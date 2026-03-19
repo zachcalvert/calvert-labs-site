@@ -180,9 +180,19 @@
         <p>
           I take on a small number of projects at a time. If you have something in mind, reach out.
         </p>
-        <p>
-          <a href="mailto:zach@calvertlabs.io">zach@calvertlabs.io</a>
-        </p>
+        <form class="contact-form" action="https://formspree.io/f/mqeywvwz" method="POST">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">What are you working on?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send it</button>
+        </form>
+        <p class="contact-fallback">Or just email me: <a href="mailto:zach@calvertlabs.io">zach@calvertlabs.io</a></p>
         <p class="github">
           <a href="https://github.com/zachcalvert" target="_blank" rel="noopener">github.com/zachcalvert ↗</a>
         </p>
