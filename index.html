@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calvert Labs</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -36,7 +36,7 @@
       </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="reveal">
       <div class="container">
         <h2>What I do</h2>
         <ul class="services-list">
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section id="process">
+    <section id="process" class="reveal">
       <div class="container">
         <h2>How I work</h2>
         <ol class="process-list">
@@ -91,7 +91,7 @@
       </div>
     </section>
 
-    <section id="work">
+    <section id="work" class="reveal">
       <div class="container">
         <h2>Projects</h2>
 
@@ -114,9 +114,16 @@
               <li>Fly.io</li>
             </ul>
           </div>
-          <video class="screenshot" autoplay muted loop playsinline>
-            <source src="images/xcelerate-zoom-and-crop.mp4" type="video/mp4" />
-          </video>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+            </div>
+            <video class="screenshot" autoplay muted loop playsinline>
+              <source src="images/xcelerate-zoom-and-crop.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
 
         <div class="project">
@@ -135,9 +142,16 @@
               <li>Fly.io</li>
             </ul>
           </div>
-          <video class="screenshot" autoplay muted loop playsinline>
-            <source src="images/bbr-chat-service.mp4" type="video/mp4" />
-          </video>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+            </div>
+            <video class="screenshot" autoplay muted loop playsinline>
+              <source src="images/bbr-chat-service.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
 
         <div class="project">
@@ -159,15 +173,22 @@
               <li>Fly.io</li>
             </ul>
           </div>
-          <video class="screenshot" autoplay muted loop playsinline>
-            <source src="images/eplbets-parlay.mp4" type="video/mp4" />
-          </video>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+            </div>
+            <video class="screenshot" autoplay muted loop playsinline>
+              <source src="images/eplbets-parlay.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div class="container">
         <h2>Let's talk</h2>
         <p>
@@ -214,6 +235,17 @@
         document.body.appendChild(overlay);
       });
     });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
