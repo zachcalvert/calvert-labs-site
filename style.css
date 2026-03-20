@@ -390,11 +390,18 @@ h2 {
   color: var(--muted);
 }
 
+.moira-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+
 .moira {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .moira img {
@@ -403,11 +410,55 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border);
+  flex-shrink: 0;
 }
 
-.moira span {
+.moira-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.moira-name {
   font-size: 0.875rem;
   color: var(--muted);
+  font-weight: 500;
+}
+
+.moira-quote {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.moira-credentials {
+  list-style: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.moira-credentials li {
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.moira-credentials li::before {
+  content: "🏅";
+  position: absolute;
+  left: -0.25rem;
+  font-size: 0.7rem;
+  top: 0.1rem;
+}
+
+.moira-cred-year {
+  font-size: 0.75rem;
+  opacity: 0.65;
 }
 
 /* Browser frame mockup */
@@ -505,13 +556,6 @@ footer a {
 
 footer a:hover {
   color: var(--fg);
-}
-
-.moira-quote {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: var(--muted);
-  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
