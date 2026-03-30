@@ -42,7 +42,7 @@
 - **Xcelerate Women** — strong reference, live at xceleratewomen.app
 
 ### Assets
-- EPL Bets — live demo of craft/polish: https://eplbets.net
+- Vino Sports — live demo of craft/polish: https://vinosports.com
 - BBR Chat — RAG/AI demo: https://bbr-chat-service.fly.dev
 - GitHub: https://github.com/zachcalvert
 
